@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
     <html lang="ko">
       <head>
         <meta name="google-adsense-account" content="ca-pub-1059415497859090" />
+        <meta name="google-site-verification" content="Uq__XjJJK6j-ipJKyUcbCDK6hy_aWPgaf3ep7bsbdlk" />
 
         {/* Google Analytics 자리
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
