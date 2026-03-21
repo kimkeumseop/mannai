@@ -6,6 +6,11 @@ import { buildSiteSchema, siteUrl } from './lib/structuredData'
 
 const siteSchema = buildSiteSchema()
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: '계산기 모음 - 만나이, 급여, 전월세, 사주 계산기',

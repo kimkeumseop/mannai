@@ -22,7 +22,6 @@
   font-size: 15px;
   width: 100%;
   outline: none;
-  transition: border-color 0.15s;
   appearance: none;
   -webkit-appearance: none;
 }
@@ -55,7 +54,10 @@
 .btn:hover { opacity: 0.85; }
 .btn:active { transform: scale(0.99); }
 
-.resultSection { animation: fadeUp 0.3s ease; }
+.resultSection {
+  animation: fadeUp 0.3s ease;
+  will-change: transform, opacity;
+}
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(8px); }

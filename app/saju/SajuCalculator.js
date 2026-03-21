@@ -22,6 +22,11 @@ const OHAENG_COLOR = {
   수: '#2196f3',
 }
 
+const fadeUpContainerStyle = {
+  animation: 'fadeUp 0.3s ease',
+  willChange: 'transform, opacity',
+}
+
 // 시진 (Hour Pillars)
 const SIJIN = [
   { label: '자시(子時)', range: '23:00~01:00', branch: 0 },
@@ -291,7 +296,7 @@ export default function SajuCalculator() {
       </div>
 
       {result && (
-        <div style={{ animation: 'fadeUp 0.3s ease' }}>
+        <div style={fadeUpContainerStyle}>
           <style>{`@keyframes fadeUp { from { opacity:0; transform:translateY(8px) } to { opacity:1; transform:translateY(0) } }`}</style>
 
           {result.solarDate && (
@@ -345,7 +350,15 @@ export default function SajuCalculator() {
                     <span style={{ fontSize: '12px', color: 'var(--text-hint)' }}>{count}개 ({pct}%)</span>
                   </div>
                   <div style={{ height: '6px', background: 'var(--border)', borderRadius: '3px', overflow: 'hidden' }}>
-                    <div style={{ height: '100%', width: `${pct}%`, background: OHAENG_COLOR[elem], borderRadius: '3px', transition: 'width 0.6s ease' }} />
+                    <div style={{
+                      height: '100%',
+                      background: OHAENG_COLOR[elem],
+                      borderRadius: '3px',
+                      transform: `scaleX(${pct / 100})`,
+                      transformOrigin: 'left center',
+                      transition: 'transform 0.6s ease, opacity 0.6s ease',
+                      willChange: 'transform, opacity',
+                    }} />
                   </div>
                 </div>
               )

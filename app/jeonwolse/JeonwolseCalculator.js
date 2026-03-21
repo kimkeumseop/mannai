@@ -267,7 +267,6 @@ export default function JeonwolseCalculator() {
               fontWeight: tab === i ? '600' : '400',
               cursor: 'pointer',
               fontFamily: 'inherit',
-              transition: 'all 0.15s',
             }}
           >
             {label}

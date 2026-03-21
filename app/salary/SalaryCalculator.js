@@ -82,6 +82,10 @@ const labelStyle = {
   display: 'block',
   fontWeight: '500',
 }
+const fadeUpContainerStyle = {
+  animation: 'fadeUp 0.3s ease',
+  willChange: 'transform, opacity',
+}
 
 export default function SalaryCalculator() {
   const [salary, setSalary] = useState('')
@@ -169,7 +173,7 @@ export default function SalaryCalculator() {
       </div>
 
       {result && (
-        <div style={{ animation: 'fadeUp 0.3s ease' }}>
+        <div style={fadeUpContainerStyle}>
           <style>{`@keyframes fadeUp { from { opacity:0; transform:translateY(8px) } to { opacity:1; transform:translateY(0) } }`}</style>
 
           <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '10px', padding: '20px 22px', marginBottom: '10px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px' }}>
