@@ -13,6 +13,7 @@ const routes = [
   { path: '/loan', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/calorie', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/hourly', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/wolgup-doduk', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
   { path: '/terms', changeFrequency: 'yearly', priority: 0.3 },
   { path: '/about', changeFrequency: 'monthly', priority: 0.5 },
